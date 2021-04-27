@@ -372,7 +372,11 @@ void DiscordClient::setIsDeafened(bool deaf) {
 
 void DiscordClient::setIsPTT(bool isPTT) {
   callAndForget("SET_VOICE_SETTINGS", {
-    { "mode", { { "type", (isPTT) ? "PUSH_TO_TALK" : "VOICE_ACTIVITY" } } },
+    { "mode", { 
+      // { "type", (isPTT) ? "PUSH_TO_TALK" : "VOICE_ACTIVITY" },
+      { "auto_threshold", (isPTT ? false : true) },
+      { "threshold", -100.0f }
+    } },
   });
 }
 
