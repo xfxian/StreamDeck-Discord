@@ -18,6 +18,8 @@ namespace DiscordPayloads {
 	});
 	struct VoiceSettingsMode {
 		VoiceSettingsModeType type;
+    	bool auto_threshold;
+      	float threshold;
 	};
 	NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(
 		VoiceSettingsMode, type

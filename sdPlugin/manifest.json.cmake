@@ -136,6 +136,36 @@
       "UUID": "com.fredemmott.discord.ptton"
     },
     {
+      "Icon": "discord-conttransmit-on",
+      "States": [
+        {
+          "Image": "discord-va"
+        },
+        {
+          "Image": "discord-va"
+        }
+      ],
+      "SupportedInMultiActions": true,
+      "Name": "Continuous Transmission On",
+      "Tooltip": "Set Continuous Transmission on",
+      "UUID": "com.fredemmott.discord.conttransmiton"
+    },
+    {
+      "Icon": "discord-ptt",
+      "States": [
+        {
+          "Image": "discord-ptt"
+        },
+        {
+          "Image": "discord-ptt"
+        }
+      ],
+      "SupportedInMultiActions": true,
+      "Name": "Continuous Transmission Off",
+      "Tooltip": "Set Continuous Transmission Off",
+      "UUID": "com.fredemmott.discord.conttransmitoff"
+    },
+    {
 			"Icon": "discord-ptt",
 			"States": [
 				{

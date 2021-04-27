@@ -14,6 +14,8 @@
 #include "PTTOnAction.h"
 #include "PTTOffAction.h"
 #include "PTTToggleAction.h"
+#include "ContTransmitOnAction.h"
+#include "ContTransmitOffAction.h"
 
 const std::string DeafenOffAction::ACTION_ID = "com.fredemmott.discord.deafenoff";
 const std::string DeafenOnAction::ACTION_ID = "com.fredemmott.discord.deafenon";
@@ -26,3 +28,5 @@ const std::string SelfMuteToggleAction::ACTION_ID = "com.fredemmott.discord.mute
 const std::string PTTOnAction::ACTION_ID = "com.fredemmott.discord.ptton";
 const std::string PTTOffAction::ACTION_ID = "com.fredemmott.discord.pttoff";
 const std::string PTTToggleAction::ACTION_ID = "com.fredemmott.discord.ptt";
+const std::string ContTransmitOnAction::ACTION_ID = "com.fredemmott.discord.conttransmiton";
+const std::string ContTransmitOffAction::ACTION_ID = "com.fredemmott.discord.conttransmitoff";

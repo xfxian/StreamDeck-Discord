@@ -28,6 +28,8 @@ LICENSE file.
 #include "SelfMuteToggleAction.h"
 #include "PTTOffAction.h"
 #include "PTTOnAction.h"
+#include "ContTransmitOnAction.h"
+#include "ContTransmitOffAction.h"
 #include "PTTToggleAction.h"
 #include "StreamDeckSDK/EPLJSONUtils.h"
 #include "StreamDeckSDK/ESDConnectionManager.h"
@@ -295,6 +297,9 @@ std::shared_ptr<ESDAction> DiscordStreamDeckPlugin::GetOrCreateAction(
   A(PTTToggleAction);
   A(PTTOnAction);
   A(PTTOffAction);
+
+  A(ContTransmitOnAction);
+  A(ContTransmitOffAction);
 
   A(JoinVoiceChannelAction);
   A(HangupAction);

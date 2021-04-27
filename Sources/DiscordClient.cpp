@@ -372,12 +372,26 @@ void DiscordClient::setIsDeafened(bool deaf) {
 
 void DiscordClient::setIsPTT(bool isPTT) {
   callAndForget("SET_VOICE_SETTINGS", {
-    { "mode", { 
-      // { "type", (isPTT) ? "PUSH_TO_TALK" : "VOICE_ACTIVITY" },
-      { "auto_threshold", (isPTT ? false : true) },
-      { "threshold", -100.0f }
-    } },
+    { "mode", { { "type", (isPTT) ? "PUSH_TO_TALK" : "VOICE_ACTIVITY" } } },
   });
+}
+
+void DiscordClient::setContTransmit(bool contTransmit) {
+  callAndForget("SET_VOICE_SETTINGS",
+    { {"mode", { 
+      { "type", "VOICE_ACTIVITY" },
+      { "auto_threshold", (contTransmit ? false : true) },
+      { "threshold", (contTransmit ? -100.0f : getPreviousThreshold()) }
+    } }
+  });
+}
+
+float DiscordClient::getPreviousThreshold() {
+  return mPreviousThreshold;
+}
+
+void DiscordClient::setPreviousThreshold(float previousThreshold) {
+  mPreviousThreshold = previousThreshold;
 }
 
 void DiscordClient::setCurrentVoiceChannel(const std::string& id) {

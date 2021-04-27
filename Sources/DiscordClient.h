@@ -67,9 +67,13 @@ class DiscordClient {
   void onReady(StateCallback);
   void onCredentialsChanged(CredentialsCallback);
 
+  float getPreviousThreshold();
+  void setPreviousThreshold(float previousThreshold);
+
   void setIsMuted(bool);
   void setIsDeafened(bool);
   void setIsPTT(bool);
+  void setContTransmit(bool);
   void setCurrentVoiceChannel(const std::string& channel_id);
 
   asio::awaitable<std::vector<DiscordPayloads::Guild>> coGetGuilds();
@@ -109,6 +113,7 @@ class DiscordClient {
   std::string mAppSecret;
   std::future<void> mWorker;
   std::shared_ptr<asio::io_context> mIOContext;
+  float mPreviousThreshold;
 
   Credentials getOAuthCredentials(
     const std::string& grantType,
