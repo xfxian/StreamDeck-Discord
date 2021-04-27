@@ -136,7 +136,7 @@
       "UUID": "com.fredemmott.discord.ptton"
     },
     {
-      "Icon": "discord-conttransmit-on",
+      "Icon": "discord-va",
       "States": [
         {
           "Image": "discord-va"
