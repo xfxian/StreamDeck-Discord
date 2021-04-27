@@ -22,7 +22,7 @@ namespace DiscordPayloads {
       	float threshold;
 	};
 	NLOHMANN_DEFINE_TYPE_NON_INTRUSIVE(
-		VoiceSettingsMode, type
+		VoiceSettingsMode, type, auto_threshold, threshold
 	);
 	struct VoiceSettingsResponse {
 		bool deaf;
